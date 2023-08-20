@@ -1,0 +1,15 @@
+#div-foot,#div-link{
+    font-size: 1.1rem;
+}
+span{
+    font-weight: bolder;
+}
+#div-foot{
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    
+}
+#About-link{
+    font-weight: bolder;
+}

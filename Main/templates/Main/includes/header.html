@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'Main/includes/header.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+<nav class="navbar navbar-light" id="nav-container">
+    <div class="container">
+        <a href="" class="navbar-brand">
+            <img class="" src="{% static 'img/Algerie-Telecom.png' %}" alt="Algerie Telecom" width="100">
+        </a>
+        {% comment "" %}
+        under this code we'll use it for logout button
+        {% endcomment %}
+
+
+    </div>
+</nav>
+{% endblock content %}
