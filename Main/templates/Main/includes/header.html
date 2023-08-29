@@ -1,21 +1,23 @@
-{% extends 'base.html' %}
+
 {% load static %}
 
-{% block css_files %}
+<head>
 <link rel="stylesheet" href="{% static 'Main/includes/header.css' %}">
-{% endblock css_files %}
+</head>
 
-{% block content %}
+
 <nav class="navbar navbar-light" id="nav-container">
     <div class="container">
-        <a href="" class="navbar-brand">
+        <a href="/" class="navbar-brand">
             <img class="" src="{% static 'img/Algerie-Telecom.png' %}" alt="Algerie Telecom" width="100">
         </a>
         {% comment "" %}
         under this code we'll use it for logout button
         {% endcomment %}
-
-
+        {% if user.is_authenticated and request.path != '/SignIn/' %}
+        <a href="{% url 'logout' %}" class="btn btn-dark btn-lg">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+        {% endif %}
     </div>
 </nav>
-{% endblock content %}

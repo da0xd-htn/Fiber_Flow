@@ -1,13 +1,16 @@
-{% extends 'base.html' %}
+
 {% load static %}
-{% block css_files %}
+
+
+<head>
 <link rel="stylesheet" href="{% static 'Main/includes/footer.css' %}">
-{% endblock css_files %}
-{% block content %}
-<div class="text-center text-dark p-3" id="div-foot">
-    
-    <a class="text-dark link-underline link-underline-opacity-0" id="About-link" href="../About.html">About</a>
-    © Copyright: 2023
-    <a class="text-dark link-underline link-underline-opacity-0" id="TDP-link" href="#">Powered By <span class="">TDP</span></a>
-</div>
-{% endblock content %}
+</head>
+
+<footer class="text-center text-lg-start fixed-bottom">
+    <div class="text-center text-dark p-3" id="div-foot">
+        
+        <a class="text-dark link-underline link-underline-opacity-0" id="About-link" href="About.html">About</a>
+        © Copyright: 2023
+        <a class="text-dark link-underline link-underline-opacity-0" id="TDP-link" href="#">Powered By <span class="">TDP</span></a>
+    </div>
+</footer>
