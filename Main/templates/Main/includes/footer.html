@@ -6,11 +6,11 @@
 <link rel="stylesheet" href="{% static 'Main/includes/footer.css' %}">
 </head>
 
-<footer class="text-center text-lg-start fixed-bottom">
-    <div class="text-center text-dark p-3" id="div-foot">
+<footer class="text-center text-lg-start " >
+    <div class="text-center text-dark p-3" id="div-foot" {% if user.is_authenticated and not is_signin_page %} style="height:10vh; align-items:center; font-size:1.3rem" {% endif %}>
         
-        <a class="text-dark link-underline link-underline-opacity-0" id="About-link" href="About.html">About</a>
+        <a class="text-dark link-underline link-underline-opacity-0" id="About-link" href="{% url 'About' %}">About</a>
         © Copyright: 2023
-        <a class="text-dark link-underline link-underline-opacity-0" id="TDP-link" href="#">Powered By <span class="">TDP</span></a>
+        <a class="text-dark link-underline link-underline-opacity-0" id="TDP-link" href="https://www.TDP.com">Powered By <span class="">TDP</span></a>
     </div>
 </footer>

@@ -18,6 +18,11 @@ def logout_view(request):
 class AuthenticationView(TemplateView):
     template_name = "Main/Sign_in.html"
     
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['is_signin_page'] = True  # Set the variable to True for the Sign In page
+        return context
+
     def post(self, request, *args, **kwargs):
         username = request.POST['Username']
         password = request.POST['Password']

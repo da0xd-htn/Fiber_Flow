@@ -1,7 +1,85 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+
 {% block title %}Home{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'Main/Home.css' %}">
+{% endblock css_files %}
 
 
 {% block content %}
 {% include './includes/header.html' %}
+<div class="container-fluide m-5 p-5" >
+<div class="row p-4 w-4 fs-5 border rounded-5" style="background-color: #d0c7c7;">
+    <p class="fw-5">In Order To Deal With Fiber Optic Installation, We've Provide the ability to 
+        study both <span style="font-weight: bolder;">Low-Level-Design (LLD)</span>  and <span style="font-weight: bolder;">High-Level-Design (HLD)</span>  Designing your fiber optic network is a breeze as the app provides intuitive tools to map out the optimal routes and connections.
+        The app's intelligent algorithms ensure efficient canalization while minimizing signal loss and interference.</p>
+</div>
+</div>
+
+<div class="section"  id="reveal" style="background-color: #333;  color: white;">
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-6 image-container">
+                <img src="{% static 'img/HLD.jpeg' %}" alt="High Level Design Image" width="500" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 section-content">
+                <h1>High Level Design</h1>
+                <p>You can simplify high-level design studies for fiber optic networks by seamlessly integrating the Google Maps API. It allows you to easily define device locations (such as OLTs, ODFs, ODBs, OCCs) and calculate distances between them. This data aids in estimating cable lengths, optimizing resource allocation, and assessing construction costs, enhancing the efficiency and accuracy of your fiber optic network planning.</p>
+                <button class="btn btn-outline-success btn-lg">CREATE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section" style="background-color: #a09c9c;">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-6 section-content" id="reveal-1">
+                <h1>Low Level Design</h1>
+                <p>You can simplify the low-level design process for fiber optic networks. It provides tools for precise cable routing, splice point placement, and connector selection. Once the design is complete, the app automates the generation of comprehensive low-level design documents, including schematics, cable layouts, and technical specifications. This streamlines the process, saving time and ensuring accuracy in fiber optic installations.</p>
+                <button class="btn btn-outline-primary btn-lg">CREATE</button>
+            </div>
+            <div class="col-md-6 image-container" id="reveal-2">
+                <img src="{% static 'img/LLD.jpg' %}" alt="Low Level Design Image" width="500" class="img-fluid rounded-5">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section" style="background-color: #333; color: white;" id="reveal-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 image-container" >
+                <img src="{% static 'img/consult.jpg' %}" alt="Consult Image" width="100" class="img-fluid rounded-5">
+            </div>
+            <div class="col-md-6 section-content" style="margin-top: 80px;">
+                <h1>Consult</h1>
+                <p>Consult your own LLD and HLD projects and explore more.</p>
+                <button class="btn btn-outline-info btn-lg">CONSULT</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% include './includes/footer.html' %}
+
 {% endblock content %}
+{% block js_files %}
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- Add jQuery (required for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
+<script src="{% static 'Main/Home.js' %}"></script>
+
+{% endblock js_files %}

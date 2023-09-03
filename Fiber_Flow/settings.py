@@ -136,6 +136,6 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Set session duration to 3 minutes (in seconds)
-SESSION_COOKIE_AGE = 60 * 3  # 3 minutes
+SESSION_COOKIE_AGE = 60 * 3 *60  # 3 minutes
 
 LOGIN_URL = 'SignIn'  # Specify the url of login page   

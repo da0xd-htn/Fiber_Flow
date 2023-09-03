@@ -14,7 +14,7 @@
         {% comment "" %}
         under this code we'll use it for logout button
         {% endcomment %}
-        {% if user.is_authenticated and request.path != '/SignIn/' %}
+        {% if user.is_authenticated and not is_signin_page %}
         <a href="{% url 'logout' %}" class="btn btn-dark btn-lg">
             <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>

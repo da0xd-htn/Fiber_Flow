@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Fiber Flow{% endblock title %}</title>
-    {% block css_files %}{% endblock css_files %}
+    
     <link rel="stylesheet" href="{% static './css/bootstrap.css' %}">
+    {% block css_files %}{% endblock css_files %}
 </head>
 <body style="background-color: #f5f5f5;">
     {% block content %}
@@ -16,5 +17,6 @@
 
     {% block js_files %}{% endblock js_files %}
     <script src="{% static './js/bootstrap.bundle.js' %}"></script>
+    
 </body>
 </html>
